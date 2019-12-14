@@ -1,7 +1,7 @@
 'use strict';
 
 
-let shoppings = ['milk', 'banana' ]
+const shoppings = ['milk', 'banana' ]
 
 function addToShoppingCart(item) {
     if (shoppings.length <= 2){
