@@ -17,18 +17,19 @@ checkCreditCard(num4)
 function checkCreditCard(creditNum){
 // Number must be 16 digits, all of them must be numbers
 
-    let length ;
+   
     //  changes the number to a string so it has length property
     let creditNumString = creditNum.toString(); 
     
     //changes the number to an array that has one string of the number
     let creditNumArr = creditNumString.split(',');
+    let lengthIsValid = creditNumString.length === 16;
     // checks if the number has 16 digits
-    if (creditNumString.length< 16 || creditNumString.length > 16) {
-        length = false; 
-     } else { 
-        length = true;
-     }
+    // if (creditNumString.length< 16 || creditNumString.length > 16) {
+    //     lengthIsValid = false; 
+    //  } else { 
+    //     lengthIsValid = true;
+    //  }
 
 // The final digit must be even
      let finalIsEven;
@@ -67,7 +68,7 @@ function checkCreditCard(creditNum){
         notTheSameNum = true; 
     }
 
-if (length && notTheSameNum && finalIsEven && sumHigherThan16) {
+if (lengthIsValid && notTheSameNum && finalIsEven && sumHigherThan16) {
     console.log('Valid credit card Number');
 } else { console.log(`${creditNum} is not valid. Please enter another number`);
 }
