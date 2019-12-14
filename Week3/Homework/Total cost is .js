@@ -1,7 +1,7 @@
 'use strict';
 
 
-let cartForParty = {
+const cartForParty = {
     beer: 25 ,
     chips: 0.99,
     coke : 2.99,
@@ -10,9 +10,9 @@ let cartForParty = {
 }
 
 function calculateTotalPrice(obj){
-    let objToArr = Object.values(obj);
+    let objAsArr = Object.values(obj);
     const reducer = (accumulator, currentValue) => accumulator + currentValue;
-    let sum = objToArr.reduce(reducer);
+    let sum = objAsArr.reduce(reducer);
 
     return console.log(sum);
 }
